@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solabs</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background-color: #0f041b;
+      overflow: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    #gif-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 30px rgba(106, 13, 173, 0.5);
+    }
+
+    .avatar::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(138, 43, 226, 0.4), transparent 70%);
+      z-index: -1;
+      box-shadow: 0 0 30px #6a0dad;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .intro-text {
+      background: rgba(0, 0, 0, 0.45);
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 12px rgba(106, 13, 173, 0.3);
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 200px;
+    }
+
+    .menu a {
+      padding: 14px 30px;
+      background: linear-gradient(145deg, #2a0a5a, #4a1a7a);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      border: none;
+      box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+      width: 100%;
+      text-align: center;
+    }
+
+    .menu a:hover {
+      background: linear-gradient(145deg, #6a0dad, #3a0a6a);
+      transform: translateY(-2px);
+    }
+
+    .menu-description {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      width: 100%;
+      min-height: 60px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 8px rgba(106, 13, 173, 0.2);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .avatar {
+        width: 160px;
+        height: 160px;
+      }
+
+      .intro-text {
+        font-size: 1rem;
+      }
+
+      .menu a {
+        min-width: 140px;
+        padding: 12px 20px;
+      }
+
+      .menu-description {
+        font-size: 0.8rem;
+        min-height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- GIF фон -->
+  <img id="gif-bg" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/9bc27292880429.5e569ff84e4d0.gif" alt="Background" />
+
+  <div class="container">
+    <div class="avatar">
+      <img src="https://media0.giphy.com/media/l0HlO4V8iCRME3i0g/200w.gif?cid=6c09b952y0g3ys1dm3fgs4uqzwuhnh3cpvxx943iioq40o70&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="Logo" />
+    </div>
+
+    <div class="intro-text">
+      Welcome to Solabs, your best solution for the best atmosphere!
+    </div>
+
+    <div class="menu">
+      <div class="menu-item">
+        <a href="#">BOT</a>
+        <div class="menu-description">Access our intelligent chatbot for instant assistance.</div>
+      </div>
+      <div class="menu-item">
+        <a href="#">SUPPORT</a>
+        <div class="menu-description">Get help from our dedicated support team.</div>
+      </div>
+      <div class="menu-item">
+        <a href="#">WORK</a>
+        <div class="menu-description">Explore career opportunities with Solabs.</div>
+      </div>
+      <div class="menu-item">
+        <a href="#">COMMUNITY</a>
+        <div class="menu-description">Join our vibrant community of users.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
