@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gorrd - Solabs</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background-color: #0f041b;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    #gif-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .intro-text {
+      background: rgba(0, 0, 0, 0.45);
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 12px rgba(106, 13, 173, 0.3);
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(50% - 10px);
+      max-width: 180px;
+      margin-bottom: 15px;
+    }
+
+    .menu a {
+      padding: 12px 20px;
+      background: linear-gradient(145deg, #2a0a5a, #4a1a7a);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      border: none;
+      box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+      width: 100%;
+      text-align: center;
+    }
+
+    .menu a:hover {
+      background: linear-gradient(145deg, #6a0dad, #3a0a6a);
+      transform: translateY(-2px);
+    }
+
+    .menu-description {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-top: 8px;
+      width: 100%;
+      min-height: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 8px rgba(106, 13, 173, 0.2);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 768px) {
+      .intro-text {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: 20px 15px;
+      }
+
+      .menu {
+        gap: 10px;
+        padding: 5px;
+      }
+
+      .menu-item {
+        width: calc(50% - 8px);
+        max-width: 160px;
+      }
+
+      .menu a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+      }
+
+      .menu-description {
+        font-size: 0.75rem;
+        min-height: 40px;
+        padding: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu-item {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img id="gif-bg" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/9bc27292880429.5e569ff84e4d0.gif" alt="Background" />
+
+  <div class="container">
+    <div class="intro-text">
+      Welcome to Gorrd, your intelligent chatbot experience!
+    </div>
+
+    <div class="menu">
+      <div class="menu-item">
+        <a href="#">CHAT NOW</a>
+        <div class="menu-description">Start a conversation with Gorrd.</div>
+      </div>
+      <div class="menu-item">
+        <a href="#">FEATURES</a>
+        <div class="menu-description">Explore Gorrd's capabilities.</div>
+      </div>
+      <div class="menu-item">
+        <a href="#">FAQ</a>
+        <div class="menu-description">Find answers to common questions.</div>
+      </div>
+      <div class="menu-item">
+        <a href="index.html">BACK TO HOME</a>
+        <div class="menu-description">Return to the main Solabs page.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
